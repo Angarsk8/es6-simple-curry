@@ -6,7 +6,7 @@ A simple curry function.
 # API
 
 ```javascript
-const curry = require('simpleCurry')
+const curry = require('es6-simple-curry')
 
 // Create a curry function as follow:
 const add = curry((a, b) => a + b)
@@ -40,5 +40,5 @@ curried(1)(null, 3)(2)
 # Installation
 
 ```bash
-npm install curry
+npm install es6-simple-curry
 ```
