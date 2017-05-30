@@ -1,6 +1,4 @@
 // @flow
-const bind = require('fast-bind')
-
 type Curried = (...args?: mixed[]) => mixed
 
 function curry(func: () => mixed, arity: number = func.length): Curried {
@@ -10,7 +8,7 @@ function curry(func: () => mixed, arity: number = func.length): Curried {
       return func.call(null, ...definedArgs)
     } else {
       return curry(
-        bind.call(func, null, ...definedArgs),
+        func.bind(null, ...definedArgs),
         arity - definedArgs.length
       )
     }
